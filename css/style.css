@@ -1,0 +1,722 @@
+
+body{
+    background-color: #FEFEFE
+}
+
+h1{
+  font-family: "Vazirmatn", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:800;
+  font-style: normal;
+}
+
+.navbar{
+    position:relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content:space-between;
+    align-items: center;
+    margin: 15px;
+}
+
+.logo img{
+    width: 80px;
+    height: 35px;
+}
+
+.personal-section{
+    display: flex;
+    flex-direction: row-reverse;
+    gap:15px
+}
+
+.personal-section img{
+    width: 25px;
+    height: 21px;
+}
+
+.sections{
+    display: flex;
+    flex-direction: row-reverse;
+    gap:50px;
+    font-family: "Vazirmatn", sans-serif;
+    font-weight:500;
+    font-size: 13px;
+}
+
+a{
+font-family: "Vazirmatn", sans-serif;
+ font-weight:500;
+ font-size: 13px; 
+ color: black;
+ text-decoration: none;
+}
+
+.slides{
+    position:absolute;
+    overflow:hidden;
+    border-radius:25px;
+    transition:opacity .5s ease;
+    position: absolute;
+    width: 100%;
+    opacity:0;
+    z-index:0;
+}
+
+.slider{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.slide-active{
+    opacity:1;
+    z-index:1;
+
+}
+
+.slider-container{
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.slides img{
+    width:95%;
+    height:500px;
+    object-fit: cover;
+    display:block;
+    margin-right: 10px;
+    margin-left: 30px;
+    border-radius: 10px;
+
+
+}
+
+.product-details{
+    position: absolute;
+    top: 50%;
+    left: 120px; 
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.product-details span{
+    font-family: "Vazirmatn", sans-serif;
+    font-weight:800;
+    font-size: 40px;
+    color: #040D22;
+    margin-bottom: 0;   
+}
+
+.product-details p {
+     font-family: "Vazirmatn", sans-serif;
+     color: #84858B;
+}
+
+.product-details button{
+    font-family: "Vazirmatn", sans-serif;
+    background-color: #004FFC;
+    color: white;
+    border-color: #004FFC;
+    border-radius:10px ;
+    padding: 10px;
+}
+
+h3{
+    font-family: "Vazirmatn", sans-serif;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+    color: #010512;
+}
+
+.title{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-bottom:35px;
+}
+
+.title h3{
+    margin-bottom:7px;
+}
+
+.line{
+    width:55px;
+    height:4px;
+    background:#2D6BFF;
+    border-radius:10px;
+}
+
+
+.product-container{
+    width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 22px;
+
+}
+
+.product{
+    width: 165px;
+    height: 170px;
+    background: #F7F8FC;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.product img{
+     width: 95px;
+    height: 95px;
+    object-fit: contain;
+    margin-bottom: 18px;
+}
+
+.product span{
+    font-family: "Vazirmatn", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #1b1b1b;
+
+}
+
+.product:hover{
+    transform: translateY(-6px);
+}
+
+
+.offer-container{
+    width:1180px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+
+.offer-card{
+    height:330px;
+    background:#FEFEFE;
+    border-style: solid;
+    border-color: #F5F6FA;
+    border-radius:20px;
+    padding:18px;
+    position:relative;
+    transition:.3s;
+}
+
+
+.offer-card:hover{
+    transform:translateY(-7px);
+}
+
+
+
+.offer-image{
+    height:200px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+.offer-image img{
+    width:160px;
+    height:160px;
+    object-fit:contain;
+}
+
+
+
+.wishlist{
+    position:absolute;
+    top:18px;
+    left:18px;
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    border:none;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+}
+
+
+.wishlist i{
+    font-size:16px;
+    color:#9D9D9F;
+}
+
+
+
+.offer-info{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+
+.offer-info h3{
+    font-family:"Vazirmatn",sans-serif;
+    font-size:16px;
+    font-weight:700;
+    color:#2C2D31;
+    margin:8px 0;
+}
+
+
+.offer-info strong{
+    font-family:"Vazirmatn",sans-serif;
+    font-size:15px;
+    font-weight:700;
+    color:#004FFC;
+    margin-bottom:12px;
+}
+
+
+.cart-btn{
+
+    width:100%;
+    height:38px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    border:none;
+    border-radius:12px;
+    border-style: solid;
+    border-color: #F6F6F6;
+    background:#FCFCFC;
+    color:#7B7B7E;
+    font-family:"Vazirmatn",sans-serif;
+    font-size:13px;
+    cursor:pointer;
+}
+
+
+.cart-btn i{
+    font-size:14px;
+    color: #7B7B7E;
+}
+
+.features{
+
+    width:1180px;
+    margin:70px auto;
+    background:#F7F8FC;
+    border-radius:22px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:35px 40px;
+    box-sizing:border-box;
+
+}
+
+
+
+.feature{
+
+    flex:1;
+    display:flex;
+    flex-direction:row-reverse;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+
+}
+
+
+
+.feature-icon{
+    width:62px;
+    height:62px;
+    border:2px solid #E7ECF8;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:white;
+    flex-shrink:0;
+
+}
+
+
+
+.feature-icon i{
+    color:#004FFC;
+}
+
+
+
+.feature-info{
+    text-align:right;
+
+}
+
+
+
+.feature-info h4{
+    margin:0 0 8px;
+    font-family:"Vazirmatn",sans-serif;
+    font-size:18px;
+    font-weight:700;
+    color:#040D22;
+
+}
+
+
+
+.feature-info p{
+    margin:0;
+    font-family:"Vazirmatn",sans-serif;
+    font-size:13px;
+    color:#7A7D86;
+
+}
+
+
+
+.divider{
+    width:1px;
+    height:60px;
+    background:#F7F8FC;
+
+}
+
+.footer{
+
+    width:1180px;
+    margin:70px auto 30px;
+    background:#F7F8FC;
+    border:1px solid #F2F4F8;
+    border-radius:22px;
+    box-shadow:0 8px 25px rgba(0,0,0,.04);
+    padding:45px 45px 20px;
+    direction:rtl;
+    box-sizing:border-box;
+
+}
+
+.footer-content{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:45px;
+
+}
+
+.footer-column h3{
+
+    font-family:"Vazirmatn",sans-serif;
+    font-size:20px;
+    font-weight:700;
+    color:#040D22;
+    margin-bottom:20px;
+
+}
+
+.footer-column p{
+    font-family:"Vazirmatn",sans-serif;
+    font-size:14px;
+    line-height:2;
+    color:#7A7D86;
+    margin:0;
+
+}
+
+.footer-column ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+
+}
+
+.footer-column ul li{
+    margin-bottom:14px;
+
+}
+
+.footer-column ul li a{
+
+    text-decoration:none;
+    color:#7A7D86;
+    font-family:"Vazirmatn",sans-serif;
+    font-size:14px;
+    transition:.3s;
+
+}
+
+.footer-column ul li a:hover{
+    color:#004FFC;
+
+}
+
+.newsletter{
+    margin-top:18px;
+    display:flex;
+    gap:10px;
+
+}
+
+.newsletter input{
+    flex:1;
+    height:45px;
+    border:1px solid #E6E8EF;
+    border-radius:10px;
+    outline:none;
+    padding:0 15px;
+    font-family:"Vazirmatn",sans-serif;
+    color:#555;
+
+}
+
+.newsletter input::placeholder{
+    color:#B1B5BF;
+
+}
+
+.newsletter button{
+    width:95px;
+    border:none;
+    border-radius:10px;
+    background:#004FFC;
+    color:white;
+    font-family:"Vazirmatn",sans-serif;
+    font-size:14px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.newsletter button:hover{
+
+    background:#003fd0;
+
+}
+
+.social-icons{
+
+    display:flex;
+
+    justify-content:flex-start;
+
+    gap:18px;
+
+    margin-top:22px;
+
+}
+.social-icons a{
+
+    width:38px;
+
+    height:38px;
+
+    border-radius:50%;
+
+    background:#F7F8FC;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+.social-icons i{
+
+    color:#6D717A;
+
+    font-size:16px;
+
+}
+
+.social-icons a:hover{
+
+    background:#004FFC;
+
+}
+
+.social-icons a:hover i{
+
+    color:white;
+
+}
+
+.footer-bottom{
+
+    margin-top:35px;
+
+    padding-top:20px;
+
+    border-top:1px solid #ECEEF5;
+
+    text-align:center;
+
+    font-family:"Vazirmatn",sans-serif;
+
+    font-size:14px;
+
+    color:#7A7D86;
+
+}
+
+.footer-bottom span{
+
+    color:#004FFC;
+
+    font-weight:700;
+
+}
+
+.cart-icon{
+    position:relative;
+    cursor:pointer;
+}
+.cart-icon img{
+    width:25px;
+    height:21px;
+}
+.cart-count{
+
+    position:absolute;
+
+    top:-10px;
+    right:-10px;
+
+    width:18px;
+    height:18px;
+
+    background:#004FFC;
+
+    color:white;
+
+    border-radius:50%;
+
+    font-size:11px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-family:"Vazirmatn",sans-serif;
+
+}
+.search-box{
+
+    display:none;
+    position:absolute;
+    top:60px;
+    right:150px;
+    z-index:1000;
+
+
+
+}
+.search-box input{
+
+    width:250px;
+
+    height:40px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    padding:0 15px;
+
+    font-family:"Vazirmatn",sans-serif;
+
+    outline:none;
+
+}
+.cart-icon{
+    position: relative;
+    cursor: pointer;
+}
+.cart-dropdown{
+
+    position: absolute;
+    top: 45px;
+    right: -260px;
+
+    width: 260px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.15);
+
+    display:none;
+
+    z-index:999;
+
+    font-family: "Vazirmatn", sans-serif;
+
+}
+.cart-dropdown.show{
+
+    display:block;
+
+}
+.cart-product{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 0;
+
+    border-bottom:1px solid #eee;
+
+}
+.cart-product img{
+
+    width:50px;
+    height:50px;
+
+    object-fit:cover;
+
+    border-radius:8px;
+
+}
+.cart-product span{
+
+    font-family: "Vazirmatn", sans-serif;
+
+    flex:1;
+
+    font-size:14px;
+
+}
+
+
+
+
